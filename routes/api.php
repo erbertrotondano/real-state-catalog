@@ -30,6 +30,7 @@ Route::prefix('v1')->namespace('App\Http\Controllers\Api')->group(function() {
 	});
 	Route::name('categories.')->group(function(){
 		Route::resource('categories', 'CategoryController');
+		Route::get('categories/{id}/real-states', 'CategoryController@realStates');
 	});
 });
 
