@@ -22,9 +22,9 @@ Route::get('hello', function() {
 });
 
 Route::prefix('v1')->namespace('App\Http\Controllers\Api')->group(function() {
-	Route::prefix('real-states')->name('real_states.')->group(function(){
+	Route::name('real_states.')->group(function(){
 		
-		Route::resource('/', 'RealStateController');
+		Route::resource('real-states', 'RealStateController');
 
 	});
 });
