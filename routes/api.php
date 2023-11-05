@@ -20,3 +20,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('hello', function() {
 	return ['msg' => 'Its aliiiive'];
 });
+
+Route::prefix('v1')->namespace('App\Http\Controllers\Api')->group(function() {
+	Route::prefix('real-states')->name('real_states.')->group(function(){
+		
+		Route::resource('/', 'RealStateController');
+
+	});
+});
+
