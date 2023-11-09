@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Tymom\JwtAuth\Contracts\JWTSubject;
 
-class User extends Authenticatable
+class User extends Authenticatable implements JWTSubject
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -49,5 +50,15 @@ class User extends Authenticatable
 
     public function profile(){
         return $this->hasOne(UserProfile::class);
+    }
+
+    // JWT Methods
+
+    public function getJwtIdentifier(){
+        return $this->getKey();
+    }
+
+    public function getJwtCustomClaims(){
+        return [];
     }
 }
