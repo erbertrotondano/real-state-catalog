@@ -29,6 +29,8 @@ Route::prefix('v1')->namespace('App\Http\Controllers\Api')->group(function() {
 	Route::get('/logout', 'Auth\\LoginJwtController@logout')->name('logout');
 	Route::get('/refresh', 'Auth\\LoginJwtController@refresh')->name('refresh');
 
+	Route::get('/search', 'RealStateSearchController@index')->name('search');
+
 	Route::group(['middleware' => ['jwt.auth']], function() {
 		Route::name('real_states.')->group(function(){
 			Route::resource('real-states', 'RealStateController');
@@ -44,6 +46,7 @@ Route::prefix('v1')->namespace('App\Http\Controllers\Api')->group(function() {
 			Route::delete('/{id}', 'RealStatePhotoController@remove')->name('delete');
 			Route::put('/set-thumb/{photoId}/{realStateId}', 'RealStatePhotoController@setThumb')->name('setThumb');
 		});
+
 	});
 	
 });
