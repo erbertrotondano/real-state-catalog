@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class RealState extends Model
 {
     use HasFactory;
+
+    protected $appends = ['_links'];
     protected $table = 'real_state';
     protected $fillable = [
     	'user_id',
@@ -21,6 +23,15 @@ class RealState extends Model
     	'property_area',
     	'total_property_area',
     ];
+
+    //Accessors
+    public function getLinksAttribute(){
+        return [
+            'href' => route('real_states.real-states.show', ['real_state' => $this->id]),
+            'rel'  => 'Imóveis'
+        ];
+        
+    }
 
     public function user(){
     	return $this->belongsTo(User::class);
