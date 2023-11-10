@@ -9,11 +9,25 @@ class Address extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+    	'address',
+		'number',
+		'neighborhood',
+		'zip_code',
+		'complement',
+    ];
+
+    protected $table = 'adresses';
+
     public function state(){
     	return $this->belongsTo(State::class);
     }
 
     public function city(){
     	return $this->belongsTo(City::class);
+    }
+
+    public function real_state(){
+    	return $this->hasOne(RealState::class);
     }
 }

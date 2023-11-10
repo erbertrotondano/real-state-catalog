@@ -8,7 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class State extends Model
 {
     use HasFactory;
-
+    
+    protected $fillable = [
+        'name',
+        'slug',
+        'initials'
+    ];
     public function country(){
     	return $this->belongsTo(Country::class);
     }
@@ -18,6 +23,6 @@ class State extends Model
     }
 
     public function adresses(){
-    	return $this->hasMany(Address::class)
+    	return $this->hasMany(Address::class);
     }
 }
