@@ -1,0 +1,772 @@
+{
+	"info": {
+		"_postman_id": "816651d7-eb4e-4689-ab1b-9d129b7ca8f9",
+		"name": "real-state-catalog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Real State",
+			"item": [
+				{
+					"name": "RealStates",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Teste CAT",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Apartamento na Olívia CAT",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Conteúdo CAT",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "19.90",
+									"type": "text"
+								},
+								{
+									"key": "slug",
+									"value": "apartamento-cat",
+									"type": "text"
+								},
+								{
+									"key": "bedrooms",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "bathrooms",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "property_area",
+									"value": "200",
+									"type": "text"
+								},
+								{
+									"key": "total_property_area",
+									"value": "400",
+									"type": "text"
+								},
+								{
+									"key": "categories[]",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "categories[]",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": "/Users/erbertrotondano/Desktop/IMG_3290.jpeg"
+								},
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": "/Users/erbertrotondano/Desktop/Captura de Tela 2023-08-21 às 11.52.04.png"
+								}
+							]
+						},
+						"url": "localhost/api/v1/real-states/"
+					},
+					"response": []
+				},
+				{
+					"name": "RealStates Copy 2",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Apartamento na Olívia",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Conteúdo",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "19.90",
+									"type": "text"
+								},
+								{
+									"key": "slug",
+									"value": "apartamento",
+									"type": "text"
+								},
+								{
+									"key": "bedrooms",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "bathrooms",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "property_area",
+									"value": "200",
+									"type": "text"
+								},
+								{
+									"key": "total_property_area",
+									"value": "400",
+									"type": "text"
+								}
+							]
+						},
+						"url": "localhost/api/v1/real-states/4"
+					},
+					"response": []
+				},
+				{
+					"name": "RealStates Copy 3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2FwaS92MS9sb2dpbiIsImlhdCI6MTY5OTU2MzE1NSwiZXhwIjoxNjk5NTY2NzU1LCJuYmYiOjE2OTk1NjMxNTUsImp0aSI6InJDVWdTMVdkcjRkUEFDYUMiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.xhvLJLFfBeUQ8JJJ5MpzFmKT8mUVX2pV3G_3qD-XRP4"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Apartamento Editado",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Apartamento na Olívia",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Conteúdo",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "19.90",
+									"type": "text"
+								},
+								{
+									"key": "slug",
+									"value": "apartamento",
+									"type": "text"
+								},
+								{
+									"key": "bedrooms",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "bathrooms",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "property_area",
+									"value": "200",
+									"type": "text"
+								},
+								{
+									"key": "total_property_area",
+									"value": "400",
+									"type": "text"
+								}
+							]
+						},
+						"url": "localhost/api/v1/real-states/"
+					},
+					"response": []
+				},
+				{
+					"name": "Put",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Apartamento Editado",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Apartamento na Olívia",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Conteúdo",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "19.90",
+									"type": "text"
+								},
+								{
+									"key": "slug",
+									"value": "apartamento",
+									"type": "text"
+								},
+								{
+									"key": "bedrooms",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "bathrooms",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "property_area",
+									"value": "200",
+									"type": "text"
+								},
+								{
+									"key": "total_property_area",
+									"value": "400",
+									"type": "text"
+								},
+								{
+									"key": "categories[]",
+									"value": "4",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "categories[]",
+									"value": "5",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": "/Users/erbertrotondano/Desktop/;lkjkl;'.png"
+								},
+								{
+									"key": "_method",
+									"value": "put",
+									"type": "default"
+								}
+							]
+						},
+						"url": "localhost/api/v1/real-states/11"
+					},
+					"response": []
+				},
+				{
+					"name": "RealStates Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost/api/v1/real-states/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost/api/v1/users"
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Aryana",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "g4f8w9x2",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "aryana@rotondano2.com",
+									"type": "default"
+								},
+								{
+									"key": "phone",
+									"value": "(73)999999999",
+									"type": "default"
+								},
+								{
+									"key": "mobile_phone",
+									"value": "(73)888888888",
+									"type": "default"
+								}
+							]
+						},
+						"url": "localhost/api/v1/users"
+					},
+					"response": []
+				},
+				{
+					"name": "Create User Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Juan Kewin Editado",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "g4f8w9x2",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "juan@kewin.com",
+									"type": "default"
+								}
+							]
+						},
+						"url": "localhost/api/v1/users/5"
+					},
+					"response": []
+				},
+				{
+					"name": "Create User Copy 3",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Aryana Editado",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "g4f8w9x2",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "aryana@rotondano.com",
+									"type": "default"
+								},
+								{
+									"key": "profile[phone]",
+									"value": "(73)9999-9991",
+									"type": "default"
+								},
+								{
+									"key": "profile[mobile_phone]",
+									"value": "(73)9999-9992",
+									"type": "default"
+								},
+								{
+									"key": "profile[about]",
+									"value": "Sobre mim...",
+									"type": "default"
+								},
+								{
+									"key": "profile[social_networks][]",
+									"value": "twitter.com/juan",
+									"type": "default"
+								},
+								{
+									"key": "profile[social_networks][]",
+									"value": "instagram.com/juan",
+									"type": "default"
+								}
+							]
+						},
+						"url": "localhost/api/v1/users/5"
+					},
+					"response": []
+				},
+				{
+					"name": "Create User Copy 2",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Juan Kewin Editado",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "g4f8w9x2",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "juan@kewin.com",
+									"type": "default"
+								}
+							]
+						},
+						"url": "localhost/api/v1/users/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Create Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Casas",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Descrição 2",
+									"type": "default"
+								},
+								{
+									"key": "slug",
+									"value": "slug-teste-2",
+									"type": "default"
+								}
+							]
+						},
+						"url": "localhost/api/v1/categories"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Category Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Teste",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Descrição",
+									"type": "default"
+								},
+								{
+									"key": "slug",
+									"value": "slug-teste",
+									"type": "default"
+								}
+							]
+						},
+						"url": "localhost/api/v1/categories/"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Category Copy 4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Teste",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Descrição",
+									"type": "default"
+								},
+								{
+									"key": "slug",
+									"value": "slug-teste",
+									"type": "default"
+								}
+							]
+						},
+						"url": "localhost/api/v1/categories/4/real-states"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Category Copy 2",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Teste",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Descrição",
+									"type": "default"
+								},
+								{
+									"key": "slug",
+									"value": "slug-teste",
+									"type": "default"
+								}
+							]
+						},
+						"url": "localhost/api/v1/categories/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Category Copy 3",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Teste",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Descrição Editada",
+									"type": "default"
+								},
+								{
+									"key": "slug",
+									"value": "slug-teste",
+									"type": "default"
+								}
+							]
+						},
+						"url": "localhost/api/v1/categories/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Photos",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "erbertrotondano@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "g4f8w9x2",
+									"type": "default"
+								}
+							]
+						},
+						"url": "localhost/api/v1/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2FwaS92MS9sb2dpbiIsImlhdCI6MTY5OTU1NzU3MSwiZXhwIjoxNjk5NTYxMTcxLCJuYmYiOjE2OTk1NTc1NzEsImp0aSI6IlNEU1dsMXJFa3R0eUhNenEiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.caEIpdUVwdobLh-1wkWDlKKkSY9qSoVmNM-uGwSd0_o"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost/api/v1/refresh"
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2FwaS92MS9sb2dpbiIsImlhdCI6MTY5OTU1NjEzNSwiZXhwIjoxNjk5NTU5NzM1LCJuYmYiOjE2OTk1NTYxMzUsImp0aSI6IjlNNWNIRDFhbG1BZW53OW0iLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.dvYz55KvdASaNHsRLbTdzjtTOvp5vo-z--ZopYPH9bo"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost/api/v1/logout"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Search",
+			"item": [
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost/api/v1/search"
+					},
+					"response": []
+				},
+				{
+					"name": "Search Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost/api/v1/search"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
